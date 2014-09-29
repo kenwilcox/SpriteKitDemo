@@ -60,6 +60,7 @@
 		BED7F83019D7B50600553944 /* SpriteKitDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteKitDemoTests-Info.plist"; sourceTree = "<group>"; };
 		BED7F83219D7B50600553944 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BED7F83419D7B50600553944 /* SpriteKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKitDemoTests.m; sourceTree = "<group>"; };
+		BED7F83E19D9109D00553944 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +91,7 @@
 		BED7F7F619D7B50500553944 = {
 			isa = PBXGroup;
 			children = (
+				BED7F83E19D9109D00553944 /* README.md */,
 				BED7F80A19D7B50500553944 /* SpriteKitDemo */,
 				BED7F82E19D7B50600553944 /* SpriteKitDemoTests */,
 				BED7F80119D7B50500553944 /* Frameworks */,

@@ -20,6 +20,7 @@
     SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     
     myLabel.text = @"Hello, World!";
+    myLabel.name = @"helloNode";
     myLabel.fontSize = 30;
     myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                    CGRectGetMidY(self.frame));
@@ -32,22 +33,35 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   /* Called when a touch begins */
   
-  for (UITouch *touch in touches) {
-    CGPoint location = [touch locationInNode:self];
+  SKNode *helloNode = [self childNodeWithName:@"helloNode"];
+  if (helloNode != nil) {
+    helloNode.name = nil;
+    SKAction *moveUp = [SKAction moveByX:0 y:100.0 duration:0.5];
+    SKAction *zoom = [SKAction scaleTo:2.0 duration:0.25];
+    SKAction *pause = [SKAction waitForDuration:0.5];
+    SKAction *fadeAway = [SKAction fadeOutWithDuration:0.25];
+    SKAction *remove = [SKAction removeFromParent];
+    SKAction *moveSequence = [SKAction sequence:@[moveUp, zoom, pause, fadeAway, remove]];
+    [helloNode runAction:moveSequence];
+  } else {
     
-    SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-    
-    sprite.position = location;
-    
-    //    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-    //    double r = drand48();// + (location.y / 100);
-    NSUInteger r = arc4random_uniform(3) + 1;
-    NSLog(@"%lu", (unsigned long)r);
-    SKAction *action = [SKAction moveByX:0.0f y:200.0f duration:r];
-    
-    [sprite runAction:[SKAction repeatActionForever:action]];
-    
-    [self addChild:sprite];
+    for (UITouch *touch in touches) {
+      CGPoint location = [touch locationInNode:self];
+      
+      SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+      
+      sprite.position = location;
+      
+      //    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+      //    double r = drand48();// + (location.y / 100);
+      NSUInteger r = arc4random_uniform(3) + 1;
+      NSLog(@"%lu", (unsigned long)r);
+      SKAction *action = [SKAction moveByX:0.0f y:200.0f duration:r];
+      
+      [sprite runAction:[SKAction repeatActionForever:action]];
+      
+      [self addChild:sprite];
+    }
   }
 }
 

@@ -11,7 +11,7 @@
 @implementation KXMyScene
 
 -(id)initWithSize:(CGSize)size {
-//  srand48(time(0));
+  //  srand48(time(0));
   if (self = [super initWithSize:size]) {
     /* Setup your scene here */
     
@@ -39,8 +39,8 @@
     
     sprite.position = location;
     
-//    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-//    double r = drand48();// + (location.y / 100);
+    //    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+    //    double r = drand48();// + (location.y / 100);
     NSUInteger r = arc4random_uniform(3) + 1;
     NSLog(@"%lu", (unsigned long)r);
     SKAction *action = [SKAction moveByX:0.0f y:200.0f duration:r];

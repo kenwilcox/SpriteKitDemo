@@ -16,13 +16,13 @@
   [super viewDidLoad];
   
   // Configure the view.
-  SKView * skView = (SKView *)self.view;
+  SKView *skView = (SKView *)self.view;
   skView.showsDrawCount = YES;
   skView.showsFPS = YES;
   skView.showsNodeCount = YES;
   
   // Create and configure the scene.
-  SKScene * scene = [KXMyScene sceneWithSize:skView.bounds.size];
+  SKScene *scene = [KXMyScene sceneWithSize:skView.bounds.size];
   scene.scaleMode = SKSceneScaleModeAspectFill;
   
   // Present the scene.

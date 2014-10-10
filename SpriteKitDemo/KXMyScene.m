@@ -38,8 +38,8 @@
     helloNode.name = nil;
     SKAction *moveUp = [SKAction moveByX:0 y:100.0 duration:0.5];
     SKAction *zoom = [SKAction scaleTo:2.0 duration:0.25];
-    SKAction *pause = [SKAction waitForDuration:0.5];
-    SKAction *fadeAway = [SKAction fadeOutWithDuration:0.25];
+    SKAction *pause = [SKAction waitForDuration:0.1];
+    SKAction *fadeAway = [SKAction fadeOutWithDuration:0.5];
     SKAction *remove = [SKAction removeFromParent];
     SKAction *moveSequence = [SKAction sequence:@[moveUp, zoom, pause, fadeAway, remove]];
     [helloNode runAction:moveSequence];
@@ -55,7 +55,7 @@
       //    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
       //    double r = drand48();// + (location.y / 100);
       NSUInteger r = arc4random_uniform(3) + 1;
-      NSLog(@"%lu", (unsigned long)r);
+//      NSLog(@"%lu", (unsigned long)r);
       SKAction *action = [SKAction moveByX:0.0f y:200.0f duration:r];
       
       [sprite runAction:[SKAction repeatActionForever:action]];

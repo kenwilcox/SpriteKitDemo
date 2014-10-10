@@ -63,7 +63,10 @@
       [self addChild:sprite];
       
       SKSpriteNode *square = [SKSpriteNode spriteNodeWithColor:[SKColor redColor] size:CGSizeMake(20, 20)];
-      [self addChild:square];
+      // Force it to be on top of the space ship
+      sprite.zPosition = 1;
+      // Add the square to the spaceship sprite it will inherit the sequence
+      [sprite addChild:square];
     }
   }
 }

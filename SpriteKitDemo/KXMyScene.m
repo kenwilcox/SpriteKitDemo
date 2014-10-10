@@ -15,6 +15,10 @@
   if (self = [super initWithSize:size]) {
     /* Setup your scene here */
     
+    SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Space"];
+    background.position = CGPointMake(size.width * 0.5, size.height * 0.5);
+    [self addChild:background];
+    
     self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
     
     SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];

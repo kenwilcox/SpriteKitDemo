@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE3B1CC119E80F8E0010F2A8 /* Space@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3B1CC019E80F8E0010F2A8 /* Space@2x.png */; };
 		BED7F80319D7B50500553944 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED7F80219D7B50500553944 /* Foundation.framework */; };
 		BED7F80519D7B50500553944 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED7F80419D7B50500553944 /* CoreGraphics.framework */; };
 		BED7F80719D7B50500553944 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED7F80619D7B50500553944 /* UIKit.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE3B1CC019E80F8E0010F2A8 /* Space@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Space@2x.png"; sourceTree = "<group>"; };
 		BED7F7FF19D7B50500553944 /* SpriteKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED7F80219D7B50500553944 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BED7F80419D7B50500553944 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -131,6 +133,7 @@
 				BED7F81C19D7B50500553944 /* KXMyScene.h */,
 				BED7F81D19D7B50500553944 /* KXMyScene.m */,
 				BED7F81F19D7B50500553944 /* Spaceship.png */,
+				BE3B1CC019E80F8E0010F2A8 /* Space@2x.png */,
 				BED7F82119D7B50500553944 /* Images.xcassets */,
 				BED7F80B19D7B50500553944 /* Supporting Files */,
 			);
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3B1CC119E80F8E0010F2A8 /* Space@2x.png in Resources */,
 				BED7F80F19D7B50500553944 /* InfoPlist.strings in Resources */,
 				BED7F82219D7B50500553944 /* Images.xcassets in Resources */,
 				BED7F82019D7B50500553944 /* Spaceship.png in Resources */,
@@ -475,6 +479,7 @@
 				BED7F83A19D7B50600553944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BED7F83B19D7B50600553944 /* Build configuration list for PBXNativeTarget "SpriteKitDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +488,7 @@
 				BED7F83D19D7B50600553944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

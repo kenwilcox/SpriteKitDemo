@@ -35,11 +35,11 @@
 }
 
 -(void)flicker:(SKSpriteNode *)node {
-  SKAction *fadeOut = [SKAction fadeOutWithDuration:0.1];
+  SKAction *fadeOut = [SKAction fadeOutWithDuration:0.01];
   SKAction *fadeIn = [SKAction fadeInWithDuration:0.1];
   SKAction *sequence = [SKAction sequence:@[fadeOut, fadeIn]];
-  
-  [node runAction:sequence];
+  SKAction *repeat = [SKAction repeatActionForever:sequence];
+  [node runAction:repeat];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -88,6 +88,7 @@
       SKSpriteNode *rightFlame = [SKSpriteNode spriteNodeWithImageNamed:@"Flame"];
       rightFlame.anchorPoint = CGPointMake(0.5, 1.0);
       rightFlame.position = CGPointMake(12, -87);
+      [self flicker:rightFlame];
       [sprite addChild:rightFlame];
     }
   }

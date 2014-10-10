@@ -61,6 +61,9 @@
       [sprite runAction:[SKAction repeatActionForever:action]];
       
       [self addChild:sprite];
+      
+      SKSpriteNode *square = [SKSpriteNode spriteNodeWithColor:[SKColor redColor] size:CGSizeMake(20, 20)];
+      [self addChild:square];
     }
   }
 }

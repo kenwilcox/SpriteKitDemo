@@ -81,11 +81,13 @@
 //      [sprite addChild:square];
       
       SKSpriteNode *leftFlame = [SKSpriteNode spriteNodeWithImageNamed:@"Flame"];
+      // centered
       leftFlame.position = CGPointMake(-12, -109);
       [self flicker:leftFlame];
       [sprite addChild:leftFlame];
       
       SKSpriteNode *rightFlame = [SKSpriteNode spriteNodeWithImageNamed:@"Flame"];
+      // with changing the anchor point
       rightFlame.anchorPoint = CGPointMake(0.5, 1.0);
       rightFlame.position = CGPointMake(12, -87);
       [self flicker:rightFlame];

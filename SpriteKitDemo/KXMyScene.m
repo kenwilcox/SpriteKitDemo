@@ -34,6 +34,14 @@
   return self;
 }
 
+-(void)flicker:(SKSpriteNode *)node {
+  SKAction *fadeOut = [SKAction fadeOutWithDuration:0.1];
+  SKAction *fadeIn = [SKAction fadeInWithDuration:0.1];
+  SKAction *sequence = [SKAction sequence:@[fadeOut, fadeIn]];
+  
+  [node runAction:sequence];
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   /* Called when a touch begins */
   
@@ -66,11 +74,21 @@
       
       [self addChild:sprite];
       
-      SKSpriteNode *square = [SKSpriteNode spriteNodeWithColor:[SKColor redColor] size:CGSizeMake(20, 20)];
-      // Force it to be on top of the space ship
-      sprite.zPosition = 1;
-      // Add the square to the spaceship sprite it will inherit the sequence
-      [sprite addChild:square];
+//      SKSpriteNode *square = [SKSpriteNode spriteNodeWithColor:[SKColor redColor] size:CGSizeMake(20, 20)];
+//      // Force it to be on top of the space ship
+//      sprite.zPosition = 1;
+//      // Add the square to the spaceship sprite it will inherit the sequence
+//      [sprite addChild:square];
+      
+      SKSpriteNode *leftFlame = [SKSpriteNode spriteNodeWithImageNamed:@"Flame"];
+      leftFlame.position = CGPointMake(-12, -109);
+      [self flicker:leftFlame];
+      [sprite addChild:leftFlame];
+      
+      SKSpriteNode *rightFlame = [SKSpriteNode spriteNodeWithImageNamed:@"Flame"];
+      rightFlame.anchorPoint = CGPointMake(0.5, 1.0);
+      rightFlame.position = CGPointMake(12, -87);
+      [sprite addChild:rightFlame];
     }
   }
 }

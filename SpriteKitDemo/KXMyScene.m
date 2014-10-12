@@ -69,8 +69,9 @@
       NSUInteger r = arc4random_uniform(3) + 1;
 //      NSLog(@"%lu", (unsigned long)r);
       SKAction *action = [SKAction moveByX:0.0f y:200.0f duration:r];
+      
+      // If scale is a negative number, it flips (rotates) the image
       SKAction *scale = [SKAction scaleBy:0.5 duration:2.0];
-      //SKAction *moveSequence = [SKAction group:@[action, scale]];
       [sprite runAction:[SKAction repeatActionForever:action]];
       [sprite runAction:scale];
       
